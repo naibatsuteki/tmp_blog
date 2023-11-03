@@ -1,7 +1,6 @@
 # How to not lose terraform features using terragrunt
 
-
-[[_TOC_]]
+[_TOC_]
 
 The goal is create robust and scalable framework, allowing us apply CI/CD practices to the infrastructure created with terraform in easy and efficient way.
 
@@ -200,7 +199,7 @@ inputs = {
 
 Now we can simply define as many environment as we want without change the code base.
 
-**Note:** Before interact with infrastructure in different environment we need remove `.terragrunt_cache` by execute `<rm with find command here>`. 
+**Note:** Before interact with infrastructure in different environment we need remove `.terragrunt_cache` by execute `<rm with find command here>`.
 
 ```sh
 ├── terragrunt.hcl
@@ -246,6 +245,10 @@ BLOG: Requirments:
   - TOC
   - Images
   - Code fragments with possibility to copy they using one click
+  - Core Leanguages Syntax Hilighting
+    - Python
+    - HCL
+    - Bash
   - Separation lines
 - Functional
   - Possiblity to create series
