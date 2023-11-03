@@ -1,14 +1,34 @@
 # How to not lose terraform features using terragrunt
 
+The goal is create robust and scalable framework, allowing us apply CI/CD practices to the infrastructure created with terraform in easy and efficient way.
+
+The core goals:
+
+1. Semantic versioning
+2. CI/CD Driven
+3. CI/CD Platform agnostic
+4. Support local development
+5. Support multiple environment.
+6. Support environments parametrization
+7. Account/Region agnostic
+
+## Goals
+
+Arcu odio ut sem nulla pharetra diam sit amet nisl. Proin libero nunc consequat interdum varius sit amet mattis vulputate.
+
+### CI/CD Driven
+
+![CI/CD](image.png)
+
 ## Terraform Overview
 
-Terraform is very popular and wildly adopted Open Source infrastructure as a de tool
+TODO Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Senectus et netus et malesuada fames ac. Scelerisque in dictum non consectetur a. Pretium viverra suspendisse potenti nullam. Eget arcu dictum varius duis at consectetur lorem donec massa. A lacus vestibulum sed arcu non odio. Purus sit amet luctus venenatis lectus magna. Arcu odio ut sem nulla pharetra diam sit amet nisl. Proin libero nunc consequat interdum varius sit amet mattis vulputate. In ornare quam viverra orci. Massa id neque aliquam vestibulum morbi blandit. Malesuada bibendum arcu vitae elementum curabitur vitae. Viverra adipiscing at in tellus integer feugiat scelerisque.
 
 ## Terragrunt Overview
 
-TODO
+TODO Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing diam donec adipiscing tristique risus nec feugiat. Suscipit adipiscing bibendum est ultricies integer quis. Augue eget arcu dictum varius duis at consectetur lorem donec. Facilisi morbi tempus iaculis urna id volutpat lacus. Nisl condimentum id venenatis a. Congue nisi vitae suscipit tellus. Amet consectetur adipiscing elit ut aliquam purus. Consectetur libero id faucibus nisl tincidunt eget nullam non nisi. Diam in arcu cursus euismod quis viverra. Dui faucibus in ornare quam viverra orci sagittis eu volutpat. Urna porttitor rhoncus dolor purus. Pulvinar etiam non quam lacus suspendisse faucibus interdum posuere. Scelerisque viverra mauris in aliquam sem fringilla ut. Vel quam elementum pulvinar etiam non quam lacus suspendisse. Dolor sed viverra ipsum nunc aliquet bibendum enim. Non diam phasellus vestibulum lorem sed risus ultricies tristique. Consectetur libero id faucibus nisl.
 
-## Present Standard Terragrunt
+## Standard Terraform/Terragrunt Approach
 
 If you will follow [Terragrunt Quick Start Guide](https://terragrunt.gruntwork.io/docs/getting-started/quick-start/) you probably end with file structure similar to this.
 
@@ -207,3 +227,23 @@ WHY???
 Provide example of the move block, import block
 
 Discuses pros and cont of this approach.
+
+Please review it Michał
+
+BLOG: Requirments:
+
+- Blog Content
+  - H1-H6 support
+  - Bold
+  - Italic
+  - Ordered list
+  - Unordered list
+  - External links
+  - Internal links
+  - TOC
+  - Images
+  - Code fragments with possibility to copy they using one click
+  - Separation lines
+- Functional
+  - Possiblity to create series
+  - Buttons redirecting directly to the next and previous blog
