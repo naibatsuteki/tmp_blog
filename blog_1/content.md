@@ -1,6 +1,6 @@
-# How to not lose terraform features using terragrunt
+# How to not lose Terraform features using Terragrunt
 
-The goal is create robust and scalable framework, allowing us apply CI/CD practices to the infrastructure created with terraform in easy and efficient way.
+The goal is to create a robust and scalable framework, allowing us to apply CI/CD practices to the infrastructure created with Terraform in an easy and efficient way.
 
 The core goals:
 
@@ -8,7 +8,7 @@ The core goals:
 2. CI/CD Driven
 3. CI/CD Platform agnostic
 4. Support local development
-5. Support multiple environment.
+5. Support multiple environments.
 6. Support environments parametrization
 7. Account/Region agnostic
 
@@ -89,8 +89,8 @@ provider "aws" {
 EOF
 }
 ```
-in the serie
-Each of the leaf terragrunt file will be contain module declaration.
+in the series
+Each of the leaf terragrunt files will contain a module declaration.
 
 ```terraform
 # infrastructure-live/stage/app/terragrunt.hcl
@@ -103,10 +103,10 @@ inputs = {
 }
 ```
 
-When I start my journey with terragrunt this approach work fine when the number of the environment was well known and infrastructure has been build from 5-10 modules. It solve multiple terraform problems especially reduce redundancy in the provider and remote state configuration and provide very confined way to execute terraform commands for multiple modules.
+When I started my journey with Terragrunt this approach worked fine when the number of the environment was well known and infrastructure has been build from 5-10 modules. It solves multiple terraform problems especially reducing redundancy in the provider and remote state configuration and provides a very confined way to execute terraform commands for multiple modules.
 
-But when environment infrastructure start getting be more complex and number of the environments increase some problem start appear. To begin with promotions by copping files, the configurations of environments are usually slightly different and after each promotion is necessary to manually correct some values, in addition you need repeat this process for each module, this produce high change of making mistake.
-Futhermore you can't answer in simple way the question: "What version of the infrastructure is currently on the `stage` environment?" or "Are versions on the `stage` and `prod` the same?" To answer this question you need check version of every module. ... The next issue is lack of the support for the some features introduced in the newer version of the terraform like `moved`, `import` or even lack of the support for standard Terraform features like `data` block can be pain in the neck.
+But when environment infrastructure start getting more complex and number of the environments increase some problems start to appear. To begin with promotions by copping files, the configurations of environments are usually slightly different, and after each promotion is necessary to manually correct some values, in addition, you need to repeat this process for each module, which produces a high chance of making mistake.
+Furthermore, you can't answer in a simple way the question: "What version of the infrastructure is currently on the `stage` environment?" or "Are versions on the `stage` and `prod` the same?" To answer this question you need to check the version of every module. ... The next issue is lack of the support for some features introduced in the newer version of the terraform like `moved`, `import` or even lack of the support for standard Terraform features like `data` block can be a pain in the neck.
 
 ## Present modified version
 
@@ -123,9 +123,9 @@ To address mentioned issues we need slightly modify previous structure. First re
         └── terragrunt.hcl
 ```
 
- Let's explain versioning first. We have now single instance of each module and all environments use the same base so we can simply add version tag eg.: `0.0.1` and this will contain versions of all modules. We can now create infrastructure artifact and use this as blue print for as many environments as we want which solve the Promotion issue. For example we can easy create temporal environment and test infrastructure upgrade process.
+ Let's explain versioning first. We have now a single instance of each module and all environments use the same base so we can simply add a version tag eg.: `0.0.1` and this will contain versions of all modules. We can now create infrastructure artifact and use this as blueprint for as many environments as we want which solve the Promotion issue. For example, we can easily create a temporal environment and test the infrastructure upgrade process.
 
-Unfortunately this approach generate problem with standard remote state generation because we have conflicted keys for the terraform remote states. The fix for this issue is relatively simple to solve by introduce few environment variables.
+Unfortunately, this approach generates problems with standard remote state generation because we have conflicted keys for the terraform remote states. The fix for this issue is relatively simple to solve by introducing a few environment variables.
 
 ```hcl
 locals {
@@ -165,8 +165,8 @@ generate "provider" {
 }
 ```
 
-After solve the backend configuration issue we need also provide method to pass values differentiate environments.
-For this purpose we can use environment variables and configuration files.
+After solving the backend configuration issue we need also to provide a method to pass values to differentiate environments.
+For this purpose, we can use environment variables and configuration files.
 
 ```hcl
 include "root" {
@@ -195,9 +195,9 @@ inputs = {
 }
 ```
 
-Now we can simply define as many environment as we want without change the code base.
+Now we can simply define as many environments as we want without changing the code base.
 
-**Note:** Before interact with infrastructure in different environment we need remove `.terragrunt_cache` by execute `<rm with find command here>`.
+**Note:** Before interacting with infrastructure in different environments we need to remove `.terragrunt_cache` by executing `<rm with find command here>`.
 
 ```sh
 ├── terragrunt.hcl
@@ -213,20 +213,20 @@ Now we can simply define as many environment as we want without change the code 
         └── terragrunt.hcl
 ```
 
-The difference between environments need to be pass via environment variables or by configuration files. For more complex scenario I recommend use configuration files but in this example we use environment variables for bre
+The difference between environments needs to be passed via environment variables or by configuration files. For more complex scenarios I recommend using configuration files but in this example, we use environment variables for bre
 
 WHY???
 
-- Access all latest terraform functionalities
+- Access all the latest terraform functionalities
   - Import block
-- Allow terragrunt manage more than one module
+- Allow terragrunt to manage more than one module
   - Data resources
   - Multiple module blocks
   - Single resources
 
 Provide example of the move block, import block
 
-Discuses pros and cont of this approach.
+Discuss pros and cons of this approach.
 
 Please review it Michał
 
@@ -242,13 +242,15 @@ BLOG: Requirments:
   - Internal links
   - TOC
   - Images
-  - Code fragments with possibility to copy they using one click
-  - Core Leanguages Syntax Hilighting
+  - Optional, but embedded videos would be nice
+  - Code fragments with the possibility to copy them using one click
+  - Core Languages Syntax Highlighting
     - Python
     - HCL
     - Bash
+    - Major programming languages blocks in general
   - Separation lines
 - Functional
-  - Possiblity to create series
+  - Possibility to create series
   - Buttons redirecting directly to the next and previous blog
   - **IF WE COULD WRITE DIRECTLY IN MARKDOWN AND UPLOAD/PUBLISH IT FROM SUCH A SOURCE TO THE WEBSITE IT WOULD BE GREAT – HIGHLY DESIRED FEATURE**
