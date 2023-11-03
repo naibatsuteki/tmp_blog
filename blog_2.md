@@ -1,5 +1,8 @@
 # How to not lose terraform features using terragrunt
 
+
+[[_TOC_]]
+
 The goal is create robust and scalable framework, allowing us apply CI/CD practices to the infrastructure created with terraform in easy and efficient way.
 
 The core goals:
@@ -89,7 +92,7 @@ provider "aws" {
 EOF
 }
 ```
-
+in the serie
 Each of the leaf terragrunt file will be contain module declaration.
 
 ```terraform
