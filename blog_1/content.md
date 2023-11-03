@@ -251,3 +251,4 @@ BLOG: Requirments:
 - Functional
   - Possiblity to create series
   - Buttons redirecting directly to the next and previous blog
+  - **IF WE COULD WRITE DIRECTLY IN MARKDOWN AND UPLOAD/PUBLISH IT FROM SUCH A SOURCE TO THE WEBSITE IT WOULD BE GREAT – HIGHLY DESIRED FEATURE**
